@@ -2,13 +2,20 @@
 #include <iostream>
 #include <iomanip>
 using namespace std;
-
+#include "../../includes/fun/fun.h"
 bool test_stub(bool debug = false)
 {
   if (debug){
     cout << "testB:: test-sub() entering test_sub" << endl;
   }
-  return true;
+  int a[20];
+  int size = 0;
+
+  for (int i = 0; i < 5; i++){
+    append_array(a, size, i);
+    print_array(a, size);
+  }
+    return true;
 }
 
 TEST(TEST_STUB, TestStub) {
