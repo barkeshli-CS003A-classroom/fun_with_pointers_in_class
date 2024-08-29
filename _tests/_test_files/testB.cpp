@@ -11,11 +11,22 @@ bool test_stub(bool debug = false)
   int a[20];
   int size = 0;
 
-  for (int i = 0; i < 5; i++){
+  for (int i = 0; i < 15; i++){
     append_array(a, size, i);
     print_array(a, size);
   }
-    return true;
+  int key;
+  key = 7;
+  int* found = find(a, size, key);
+  if (found == nullptr){
+    cout << key << " not found!";
+  }
+  else{
+    // cout << key << " was found at index: [" << found << "]" << endl;
+    cout << key << " was found at index: [" << whats_here(a, size, found) << "]" << endl;
+
+  }
+  return true;
 }
 
 TEST(TEST_STUB, TestStub) {
