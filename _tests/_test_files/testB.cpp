@@ -3,8 +3,8 @@
 #include <iomanip>
 using namespace std;
 #include "../../includes/fun/fun.h"
-bool test_stub(bool debug = false)
-{
+bool int_test(bool debug = false){
+
   if (debug){
     cout << "testB:: test-sub() entering test_sub" << endl;
   }
@@ -26,6 +26,12 @@ bool test_stub(bool debug = false)
     cout << key << " was found at index: [" << whats_here(a, size, found) << "]" << endl;
 
   }
+  return true;
+
+}
+
+bool test_stub(bool debug = false){
+  int_test(debug);
   return true;
 }
 
